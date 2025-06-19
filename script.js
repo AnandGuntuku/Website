@@ -4,11 +4,11 @@
 
 const projects = [
   {
-    title: "Customer Segmentati",
+    title: "How to arrive at Combo Offers",
     img: "project1.jpg",
-    description: "Data mining approaches for segmenting customers based on behavior.",
+    description: "Data mining approach for segmenting products based on customer purchases.",
     toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
-    category: "Dashboard"
+    category: "Professional"
   },
   // For projects associated with more buttons as needed in HTML file too.
   {
@@ -16,7 +16,7 @@ const projects = [
     img: "project2.jpg",
     description: "Population density visualization using hexbin maps.",
     toc: null,
-    category: "Dashboard"
+    category: "Professional"
   },
   {
     title: "NLP Trends 2024",
