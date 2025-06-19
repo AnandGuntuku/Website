@@ -1,0 +1,176 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anand Vijay - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="layout">
+
+    <aside>   
+  <!-- ALL of this stays grouped naturally at the top -->
+  <img src="ImageProfilePicture.jpg" alt="Anand Vijay Sankar Guntuku" />
+  <h2>Anand Guntuku</h2>
+  <p>Machine Learning. Python.<br />Chemical Engineering. </p>
+  <nav>
+    <ul>
+      <li class="active" data-target="home-section"><img src="HomeIcon.png" alt="Home icon" /> Home</li>
+      <li data-target="projects-section"><img src="ProjectsIcon.png" alt="Projects icon" /> Projects</li>
+      <li data-target="experience-section"><img src="ExperienceIcon.png" alt="Experience icon" /> Experience</li>
+      <li data-target="blog-section"><img src="BlogIcon.png" alt="Blog icon" /> Blog</li>
+      <li data-target="services-section"><img src="ServicesIcon.png" alt="Services icon" /> Services</li>
+      <li data-target="resume-section"><img src="PhotographyIcon.png" alt="Photography icon" /> Resume</li>
+
+    </ul>
+  </nav>
+
+  
+  <div class="theme-switcher">
+    <h4>Theme Color</h4>
+    <div class="color-options">
+      <button class="color-btn" data-color="--accent-green" title="Green"></button>
+      <button class="color-btn" data-color="--accent-blue" title="Blue"></button>
+      <button class="color-btn" data-color="--accent-Grey" title="Grey"></button>
+      <button class="color-btn" data-color="--accent-titaniumyellow" title="Yellow"></button>
+    </div>
+  </div>
+</aside>
+
+
+    <!-- MIDDLE SECTION -->
+    <div class="content">
+      <div class="content-inner">
+        <!-- HOME SECTION -->
+        <section id="home-section">
+          <h1>👋 Hey, I’m Anand Vijay!</h1>
+          <p>Welcome to my digital home. I'm a machine learning platform engineer and Python developer, passionate about productivity and real-world impact.</p>
+          <p>This section dynamically updates based on the menu selected.</p>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section id="projects-section">
+  <div class="project-filters">
+  <button onclick="renderProjects('all')">Show All</button>
+  <button onclick="renderProjects('AI')">AI</button>
+  <button onclick="renderProjects('Dashboard')">Dashboard</button>
+  <button onclick="renderProjects('Tools')">Tools</button>
+  <!-- Add more buttons as needed -->
+</div>
+<div class="project-grid"></div>
+</section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section id="experience-section">
+  <div class="tabs"></div>
+</section>
+
+
+        <!-- BLOG SECTION -->
+        <section id="blog-section" class="hidden">
+          <h1>📚 Blog</h1>
+          <p>Curated thoughts, conversations, and learning.</p>
+
+          <div class="blog-filters">
+            <button onclick="filterBlogs('all')">Show All</button>
+            <button onclick="filterBlogs('articles')">Articles</button>
+            <button onclick="filterBlogs('quotes')">Quotes</button>
+            <button onclick="filterBlogs('howtos')">How Tos</button>
+            <button onclick="filterBlogs('updates')">Personal Updates</button>
+          </div>
+          
+          <div class="blog-list"></div>
+
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section id="services-section" class="hidden services">
+          <p style="margin-bottom: 1.5rem; font-size: 1rem;">
+    Hi! These are the services I'm offering to you. You can contact me for a free consultation to discuss your business problem.
+  </p>
+          
+          <div class="service-block">
+            <div class="carousel">
+              <button class="arrow left">&#10094;</button>
+              <img class="service-image" src="" alt="Service" />
+              <button class="arrow right">&#10095;</button>
+            </div>
+          </div>
+          <div class="service-block">
+            <div class="carousel">
+              <button class="arrow left">&#10094;</button>
+              <img class="service-image" src="" alt="Service" />
+              <button class="arrow right">&#10095;</button>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Footer -->
+      <div class="footer">
+        <p>&copy; 2025 Anand Vijay</p>
+        <p>Built by Anand | Inspired by clean, minimalist design</p>
+      </div>
+    </div>
+
+    <!-- RIGHT SIDEBAR -->
+    <div class="right" id="right-panel">
+  <div class="search-bar" id="home-search-bar">
+    <input type="text" placeholder="Search tags across the site..." disabled />
+    <p style="font-size: 0.9rem; color: var(--medium); margin-top: 0.5rem;">Search feature coming soon.</p>
+  </div>
+</div>
+
+
+    <!-- MODALS -->
+    <div class="modal" id="projectModal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeModal()">&times;</button>
+        <img id="modalImg" src="" alt="Project Image" />
+        <div class="modal-body">
+          <div class="modal-text" id="modalText"></div>
+          <div class="toc" id="modalToc"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="blogModal">
+      <div class="modal-content">
+        <button class="close-btn" onclick="closeBlogModal()">&times;</button>
+        <div class="modal-body">
+          <div class="modal-text" id="blogModalText"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- RESUME SECTION -->
+<section id="resume-section" class="hidden">
+  <h1>📄 Resume Gallery</h1>
+  <p>Explore tailored resumes for different roles. Click to preview or download directly.</p>
+  
+  <div class="resume-grid"></div>
+</section>
+
+<!-- MODAL FOR RESUME PREVIEW -->
+<div class="modal" id="resumeModal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeResumeModal()">&times;</button>
+    <a id="resumeDownloadBtn" class="download-btn" href="#" download target="_blank">⬇ Download PDF</a>
+    <img id="resumeModalImage" src="" alt="Full Resume Image" />
+  </div>
+</div>
+
+  
+  
+  
+  <script src="script.js"></script>
+  <script src="blog.js"></script>
+  <script src="services.js"></script>
+</body>
+</html>
