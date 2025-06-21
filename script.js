@@ -6,7 +6,7 @@ const projects = [
   {
     title: "How to arrive at Combo Offers",
     img: "project1.jpg",
-    description: "Data mining approach for segmenting products based on customer purchases.",
+    description: "Data mining approach for segmenting products based on customer purchases. This is to ascertain the significant changeovers of data implications on technology",
     toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
     category: "Professional"
   },
