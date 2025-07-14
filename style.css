@@ -26,7 +26,9 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
   background-color: var(--darkest);
   color: var(--darkest);
 }
@@ -34,9 +36,10 @@ html, body {
 /* ========== BASE LAYOUT ========== */
 .layout {
   display: flex;
-  height: 98%;
-  margin-top: 1%;
+  min-height: 200vh; /* ✅ this ensures full page height */
+  margin-top: 0;
 }
+
 
 aside {
   width: 17.5%;
@@ -57,7 +60,8 @@ aside {
 
 
 aside img {
-  width: 70%;
+  width: 170px;               /* Fixed width */
+  height: 150px;              /* Same as width */
   border-radius: 50%;
   border: 3px solid var(--medium);
   margin-bottom: 1rem;
@@ -180,8 +184,7 @@ nav li img {
   margin-right: 4.5%;
   width: 55%;
   padding: 1.5rem;
-  height: auto;
-  overflow-y: auto;
+  overflow-y:auto;
   background-color: var(--medium);
   border-radius: 12px;
   margin-top: 1rem;
@@ -386,6 +389,15 @@ nav li img {
   color: var(--darkest);
   cursor: pointer;
 }
+.project-filters button.active {
+  background-color: var(--lightest);
+  font-weight: 600;
+}
+.project-card:hover {
+  background-color: var(--lightest);
+  transition: background-color 0.2s;
+}
+
 
 /* ========== EXPERIENCE SECTION ========== */
 .tabs {
@@ -696,6 +708,124 @@ nav li img {
 /* ========== VISIBILITY UTILS ========== */
 .hidden {
   display: none;
+}
+
+.hamburger {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--lightest);
+  z-index: 1000;
+  cursor: pointer;
+  
+}
+
+
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+  
+.hamburger {
+  display: block;
+}
+
+ aside {
+  display: none; /* hide sidebar initially */
+  width: 70%;     /* wider for mobile touch */
+  position: fixed;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: var(--darkest);
+  z-index: 999;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem;
+  overflow-y: auto; 
+}
+aside.active {
+  display: flex !important;
+}
+
+  aside img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .sidebar-main {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 20%;
+  }
+
+  aside:not(.active) nav {
+    display: none;
+  }
+
+  aside.active nav {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+
+  .theme-switcher {
+    display: none;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .right {
+    display: none; /* optional: hide summary panel on mobile */
+  }
+
+  .project-filters,
+  .blog-filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-grid,
+  .resume-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .modal-content {
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .modal-body {
+    flex-direction: column;
+  }
+
+  .modal-content img {
+    max-width: 100%;
+  }
+
+  .toc {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .footer {
+    font-size: 0.75rem;
+    text-align: center;
+    margin-left: 0;
+  }
 }
 
 
