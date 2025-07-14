@@ -26,7 +26,9 @@
 
 html, body {
   height: 100%;
-  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  overflow: auto;
   background-color: var(--darkest);
   color: var(--darkest);
 }
@@ -34,9 +36,10 @@ html, body {
 /* ========== BASE LAYOUT ========== */
 .layout {
   display: flex;
-  height: 98%;
-  margin-top: 1%;
+  min-height: 200vh; /* ✅ this ensures full page height */
+  margin-top: 0;
 }
+
 
 aside {
   width: 17.5%;
@@ -57,8 +60,8 @@ aside {
 
 
 aside img {
-  width: 50%;
-  height: 60%
+  width: 170px;               /* Fixed width */
+  height: 150px;              /* Same as width */
   border-radius: 50%;
   border: 3px solid var(--medium);
   margin-bottom: 1rem;
@@ -181,8 +184,7 @@ nav li img {
   margin-right: 4.5%;
   width: 55%;
   padding: 1.5rem;
-  height: auto;
-  overflow-y: auto;
+  overflow-y:auto;
   background-color: var(--medium);
   border-radius: 12px;
   margin-top: 1rem;
@@ -387,6 +389,15 @@ nav li img {
   color: var(--darkest);
   cursor: pointer;
 }
+.project-filters button.active {
+  background-color: var(--lightest);
+  font-weight: 600;
+}
+.project-card:hover {
+  background-color: var(--lightest);
+  transition: background-color 0.2s;
+}
+
 
 /* ========== EXPERIENCE SECTION ========== */
 .tabs {
