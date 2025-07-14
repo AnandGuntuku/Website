@@ -10,11 +10,14 @@ HTML
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <button id="menu-toggle" class="hamburger">&#9776;</button>
+
+  
   <div class="layout">
 
     <aside>   
   <!-- ALL of this stays grouped naturally at the top -->
-  <img src="ImageProfilePicture.jpg" alt="Anand Vijay Sankar Guntuku" />
+  <img src="https://github.com/AnandGuntuku/Website/blob/ResumeFill_19625/images/Home/ProfilePic.jpg?raw=true" alt="Anand Vijay Sankar Guntuku" />
   <h2>Anand Guntuku</h2>
   <p>Machine Learning. Python.<br />Chemical Engineering. </p>
   <nav>
@@ -53,12 +56,15 @@ HTML
         </section>
 
         <!-- PROJECTS SECTION -->
-        <section id="projects-section">
+  <section id="projects-section">
+          <h1>🛠️ Projects</h1>
   <div class="project-filters">
   <button onclick="renderProjects('all')">Show All</button>
-  <button onclick="renderProjects('AI')">AI</button>
-  <button onclick="renderProjects('Dashboard')">Dashboard</button>
-  <button onclick="renderProjects('Tools')">Tools</button>
+  <button onclick="renderProjects('Professional')">Professional</button>
+  <button onclick="renderProjects('Academic-Data Science/ML')">Academic-DataScience-ML</button>
+    <button onclick="renderProjects('Academic-Chemical Engineering')">Academic-ChemicalEngineering</button>
+  <button onclick="renderProjects('Personal')">Personal</button>
+    
   <!-- Add more buttons as needed -->
 </div>
 <div class="project-grid"></div>
@@ -66,6 +72,8 @@ HTML
 
         <!-- EXPERIENCE SECTION -->
         <section id="experience-section">
+          <h1>💼 Work Experience</h1>
+          <p>My Professional, academic and internship experience along with some extracurriculars.</p>
   <div class="tabs"></div>
 </section>
 
@@ -79,7 +87,7 @@ HTML
             <button onclick="filterBlogs('all')">Show All</button>
             <button onclick="filterBlogs('articles')">Articles</button>
             <button onclick="filterBlogs('quotes')">Quotes</button>
-            <button onclick="filterBlogs('howtos')">How Tos</button>
+            <button onclick="filterBlogs('Perspectives')">Perspectives</button>
             <button onclick="filterBlogs('updates')">Personal Updates</button>
           </div>
           
@@ -109,6 +117,26 @@ HTML
           </div>
         </section>
       </div>
+      
+      
+        <!-- RESUME SECTION -->
+  
+<div class="content-inner">
+<section id="resume-section" class="hidden">
+  <h1>📄 Resume Gallery</h1>
+  <p>Explore tailored resumes for different roles. Click to preview or download directly.</p>
+  
+  <div class="resume-grid"></div>
+</section>
+</div>
+<!-- MODAL FOR RESUME PREVIEW -->
+<div class="modal" id="resumeModal">
+  <div class="modal-content">
+    <button class="close-btn" onclick="closeResumeModal()">&times;</button>
+    <a id="resumeDownloadBtn" class="download-btn" href="#" download target="_blank">⬇ Download PDF</a>
+    <img id="resumeModalImage" src="" alt="Full Resume Image" />
+  </div>
+</div>
 
       <!-- Footer -->
       <div class="footer">
@@ -149,22 +177,7 @@ HTML
   </div>
 
   
-  <!-- RESUME SECTION -->
-<section id="resume-section" class="hidden">
-  <h1>📄 Resume Gallery</h1>
-  <p>Explore tailored resumes for different roles. Click to preview or download directly.</p>
-  
-  <div class="resume-grid"></div>
-</section>
 
-<!-- MODAL FOR RESUME PREVIEW -->
-<div class="modal" id="resumeModal">
-  <div class="modal-content">
-    <button class="close-btn" onclick="closeResumeModal()">&times;</button>
-    <a id="resumeDownloadBtn" class="download-btn" href="#" download target="_blank">⬇ Download PDF</a>
-    <img id="resumeModalImage" src="" alt="Full Resume Image" />
-  </div>
-</div>
 
   
   
