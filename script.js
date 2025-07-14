@@ -1,45 +1,236 @@
 // ========== UNIFIED SCRIPT FOR ALL SECTIONS ==========
 
 // ========== UPDATE FOR PROJECT SECTION ==========
+const active = document.querySelector("nav li.active");
 
 const projects = [
   {
-    title: "Customer Segmentati",
+    title: "Digitizing Business on Real Time Basis ",
+    img: "project1.jpg",
+    description: "df",
+    toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
+    category: "Professional"
+  },
+   {
+    title: " Mobile Air Pollution Monitoring with Low-Cost IoT sensors ",
+    img: "project1.jpg",
+    description: "df",
+    toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
+    category: "Professional"
+  },
+  
+{
+    title: "App Development for Bus Tracking @ IIT Madras - 'TrackIIT' ",
+    img: "project1.jpg",
+    description: "df",
+    toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
+    category: "Professional"
+  },
+      {
+    title: "Safety and Maintenance in Solar and Wind Substations",
     img: "project1.jpg",
     description: "Data mining approaches for segmenting customers based on behavior.",
     toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
-    category: "Dashboard"
+    category: "Professional"
   },
+  
+  {
+    title: "Allocated Seat Pricing in Airlines",
+    img: "project1.jpg",
+    description: "Data mining approaches for segmenting customers based on behavior.",
+    toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
+    category: "Professional"
+  },
+  
+  {
+    title: "Computational Framework for Estimating Air Pollution through Satellite Data",
+    img: "project1.jpg",
+    description: "Data mining approaches for segmenting customers based on behavior.",
+    toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
+    category: "Academic-DataScience-ML"
+  },
+  
+  {
+    title: "Data science and IoT based mobile monitoring framework for hyper-local PM2.5 assessment in urban setting",
+    img: "project1.jpg",
+    description: "Data mining approaches for segmenting customers based on behavior.",
+    toc: `<ul><li> A case study of air pollution analysis during Diwali in Chennai </li> <li> A comparative study of analysis of air pollution in different zones viz. industrial, commercial, academic and residential </li> <li> Just like the fastest route and shortest route, can we also have cleanest route!? Yes, it is possible an it depends on weather, time of the day and many other factors!  </li> </ul>`,
+    category: "Academic-DataScience-ML"
+  },
+  
   // For projects associated with more buttons as needed in HTML file too.
-  {
-    title: "Hexbin Visualization",
+    {
+    title: "Application of Reinforcement Learning in Microfluidics",
+    img: "project1.jpg",
+    description: "Data mining approaches for segmenting customers based on behavior.",
+    toc: `<ul><li>Intro</li><li>Methods</li><li>Results</li></ul>`,
+    category: "Academic-DataScience-ML"
+  },
+    {
+    title: "Methane to Vinyl Acetate Monomer via Acetylene Intermediate and Natural Gas as Feedstock",
     img: "project2.jpg",
-    description: "Population density visualization using hexbin maps.",
+    description: "In this report a process is designed for the production of vinyl acetate monomer from natural gas via acetylene as an intermediate. This report was made as an assignment for Royal Dutch Shell to investigate whether this process might be viable in the future. It is expected that in the last half of the 21st century electricity and natural gas will become cheaper because of an abundance of renewable electricity. A process plant design is made for a production of 100 kton of vinyl acetate monomer per year with a purity of 99.8 wt.%. A plasma reactor is used for the first part of the process where the natural gas is converted into acetylene. In the second part of the process acetic acid is fed in a fixed bed reactor converted together with the acetylene to the final product vinyl acetate monomer. A safety analysis is conducted and the process is safe to execute. Heat integration has been applied to minimize the need of heating and cooling utilities. Environmental analysis were made to determine the environmental impact of the process. Furthermore, an economical analysis shows that for now, the process is not economical feasible. A decrease in natural gas and electricity prices will make the process more profitable. If the gas and electricity price will be halved, a return on investment of 14% is achieved, corresponding to a payback period of 24 years.",
+    toc: `<ul><li>A feasibility peport for the Royal Dutch Shell as an industry-academia collaboration project with University of Twente. </li> 
+    <li>An economical feasibility case study for Shell, Netherlands on a sustainable process for production of Vinyl Acetate Monomer(VAM) from Natural Gas via Acetylene as an intermediate, making it viable with an Electric Arc Plasma Reactor, since it is expected that electricity will get a lot cheaper in the next 20 years. </li>
+
+<li>VAM is used in the making of a number of polymers and resins for adhesives, coatings, paints, films, textiles and other products, hence, it is a part of extensive range of products that are used in our daily lives.</li>
+
+<li>This five-membered group project involved sequential steps like scope and design basis, conceptual design, developing Process Flow Diagram(PFD), safety, process control, equipment design, heat integration, economical and technical evaluation. </li></ul>`,
+    category: "Academic-ChemicalEngineering"
+  },
+  
+  {
+    title: "Surface Water Changes Across Tibetan Plateau",
+    img: "project2.jpg",
+    description: "A course project on analysis of increasing water levels in Tibetan Plateau and its effects in the course of the rivers in South Asia and South East Asia.",
+    toc: `<ul><li>A course project on analysis of increasing water levels in Tibetan Plateau and its effects in the course of the rivers in South Asia and South East Asia.</li></ul>`,
+    category: "Academic-ChemicalEngineering"
+  },
+  
+  {
+    title: "Modelling of forces in Acoustophoresis - Soft Matter Fluidics & Interfaces",
+    img: "project2.jpg",
+    description: "Acoustophoresis is a mode of separation of particles by sound waves",
     toc: null,
-    category: "Dashboard"
+    category: "Academic-ChemicalEngineering"
   },
   {
-    title: "NLP Trends 2024",
+    title: "Diabetes Prediction - A Case of Healthcare Corporation",
     img: "project3.jpg",
-    description: "A scientific paper analyzing NLP model trends in 2024.",
+    description: "predict diabetes using individual parameters like Height, Weight,Age, Sex, BMI, HC,WHR, etc., without doing any tests at all",
     toc: `<ul><li>Abstract</li><li>Methodology</li><li>Experiments</li></ul>`,
-    category: "AI"
+    category: "Academic-DataScience-ML"
   },
   {
-    title: "Terres Inovia",
+    title: "Decision Support for University Timetables",
     img: "project4.jpg",
     description: "Dashboard for Terres Inovia oilseed research.",
     toc: `<ul><li>Overview</li><li>Dataset</li><li>How to Use</li></ul>`,
-    category: "Dashboard"
+    category: "Academic-DataScience-ML"
   },
   {
-    title: "Shiny App Demo",
+    title: "Simulation of Design of Sulphuric Acid Plant using Aspen Plus",
     img: "project5.jpg",
-    description: "Interactive visualization demo using R Shiny.",
+    description: "Plant design on the basis of plant in Fertilizers and Checmicals Travencore, Kochi",
     toc: `<ul><li>Widgets</li><li>Server Logic</li><li>User Interface</li></ul>`,
-    category: "Tools"
+    category: "Academic-ChemicalEngineering"
+  },
+  
+  {
+    title: "Empirical Modellinig in Biological Systems",
+    img: "project5.jpg",
+    description: "Research project .",
+    toc: `<ul><li>Widgets</li><li>Server Logic</li><li>User Interface</li></ul>`,
+    category: "Academic-ChemicalEngineering"
   }
+  
+  
 ];
+
+
+// ========== UPDATE FOR EXPERIENCE SECTION ==========
+const experienceData = {
+  academic: [
+    {
+  "title": "Indian Institute of Technology, Madras",
+  "details": "Master of Technology (M.Tech), Chemical Engineering, 2018 - 2020",
+  "summary": "Completed M.Tech in Chemical Engineering with a CGPA of 8.94/10. Focused on data-driven environmental modelling, process engineering, and sustainability. The program combined rigorous theoretical foundations with hands-on computational and lab-based exposure.",
+  "content": "<p><strong>🎓 Master’s Thesis:</strong> Developed a <em>computational framework</em> for estimating urban air pollution levels in <strong>Delhi and Chennai</strong> using satellite-based aerosol optical depth (AOD) data and ground-based Central Pollution Control Board (CPCB) sensor data. The model aimed to bridge spatial and temporal gaps in air quality data.</p><br><p><strong>📄 Research Publication:</strong> Co-authored a peer-reviewed research paper titled <em>“Hyperlocal air quality assessment using low-cost mobile sensing paradigm”</em>, published in the <strong>Building and Environment</strong> journal. The study explored the use of mobile sensors for real-time, location-specific pollution mapping to support urban environmental planning.</p><br><h3>📘 Major Subjects and Technical Focus Areas</h3><ul><li><strong>Environmental Data Modelling:</strong> Techniques to integrate satellite and ground-level datasets for pollution estimation and forecasting.</li><li><strong>Transport Phenomena:</strong> In-depth understanding of momentum, heat, and mass transfer in complex chemical systems.</li><li><strong>Process Control:</strong> Advanced control system design for real-time process optimization using feedback and feedforward mechanisms.</li><li><strong>Multiphase Flow & Reactor Design:</strong> Design and simulation of packed bed, bubble column, and fluidized bed reactors.</li><li><strong>Computational Fluid Dynamics (CFD):</strong> Numerical analysis using ANSYS Fluent and OpenFOAM to simulate flow and transport in chemical processes.</li><li><strong>Sustainable Process Design:</strong> Life Cycle Assessment (LCA), green chemistry, and energy-efficient process synthesis.</li><li><strong>Advanced Separation Processes:</strong> Techniques such as membrane separation, adsorption, and hybrid systems for pollution control and purification.</li></ul><br><p>The academic journey at IIT Madras sharpened my ability to merge <strong>domain knowledge, data science, and environmental systems thinking</strong>—a foundation I actively apply in policy, research, and engineering problem-solving.</p>"
+},
+    
+ {
+  "title": "University of Twente, Netherlands",
+  "details": "Student Exchange Program, Feb - July, 2019",
+  "summary": "Twente Exchange: Semester in Netherlands; Advanced Process Control; Cultural Exchange.",
+  "content": "<p>My first international academic experience at the <strong>University of Twente</strong> was transformative—both intellectually and personally. The curriculum offered exceptional freedom to choose courses of interest, each enriched with practical applications, interdisciplinary collaboration, and real-world industry exposure. I embraced this opportunity fully, diving deep into projects that blended technical rigour with innovation and sustainability.</p> <br> <h3>🏭 Process Plant Design (PPD) – Industry Project with SHELL</h3><p>This flagship course revolved around an industrial-scale group project sponsored by <strong>SHELL</strong>. Our objective was to perform a comprehensive feasibility analysis for the design of a new chemical plant.</p><p><strong>Key contributions included:</strong></p><ul><li><strong>Raw Material Selection:</strong> Analyzed sourcing options considering availability, environmental impact, and cost-effectiveness.</li><li><strong>Plant Design:</strong> Developed process flow diagrams (PFDs), piping & instrumentation diagrams (P&IDs), and designed unit operations like reactors, heat exchangers, and separators.</li><li><strong>Process Safety:</strong> Conducted HAZOP (Hazard and Operability) studies and implemented safety interlocks to meet SHELL’s stringent safety requirements.</li><li><strong>Economic Evaluation:</strong> Carried out Net Present Value (NPV), Internal Rate of Return (IRR), and payback period analyses to assess economic viability.</li></ul><p>This course honed my <strong>teamwork</strong>, <strong>technical design</strong>, and <strong>strategic thinking</strong> abilities in a real-world engineering context.</p><h3> <br> 📊 Data Analytics</h3><p><strong>Sub-courses:</strong> Data Presentation & Visualization (DPV), Data Mining (DM)</p><p>These modules laid a robust foundation in <strong>data-driven decision-making</strong> using visualization and mining techniques.</p><ul><li><strong>DPV:</strong> Built interactive dashboards with Tableau and Python (Matplotlib, Seaborn); learned effective visual storytelling for actionable insights.</li><li><strong>DM:</strong> Applied machine learning algorithms like K-Means, Decision Trees, and Association Rule Mining to real-world datasets.</li></ul><p>These courses empowered me to extract, interpret, and communicate insights from complex data—a vital cross-sector skill.</p><h3> <br> ♻️ Sustainable Process Technology (Lab Course)</h3><p>This lab-intensive course focused on <strong>green chemistry principles</strong> and <strong>low-carbon process engineering</strong>.</p><ul><li>Executed experiments in waste-to-energy and catalytic hydrogenation.</li><li>Evaluated sustainability metrics like E-factor and atom economy.</li><li>Worked in teams to optimize reactions and minimize waste.</li></ul><p>It deepened my resolve to promote sustainable innovation in industrial processes.</p> <br> <h3>🧪 Capita Selecta: Soft Matter, Fluidics and Interfaces (SFI)</h3><p>This advanced course explored the behavior of soft materials and interfacial phenomena.</p><ul><li>Studied microfluidics, electrowetting, surface instabilities, and nanofluidics.</li><li>Designed simulations to model soft interface behavior.</li></ul><p>It expanded my understanding of mesoscale physics with applications in biomedical and consumer domains.</p><h3> <br> 🧠 Lean Six Sigma</h3><p>This interdisciplinary course focused on <strong>process improvement and quality control</strong>.</p><ul><li>Applied DMAIC, Ishikawa diagrams, control charts, and Pareto analysis.</li><li>Led a project to streamline a simulated production line and reduce defects.</li></ul><p>It sharpened my process-thinking mindset—centered on efficiency, quality, and impact.</p><h3> <br> 💧 Water and Climate</h3><p>An integrative course linking hydrology, climate science, and sustainability policy.</p><ul><li>Modeled rainfall-runoff systems and assessed watershed sensitivity around dams in Matlab.</li><li>Explored climate adaptation tools like smart urban planning taking the case study of The Netherlands facing a grave threat from sea water rise.</li></ul><p>It nurtured a systemic understanding of environmental governance—essential for future policy-driven work.</p><h3> <br> 🌟 Key Takeaway</h3><p>My time at the University of Twente was a springboard into interdisciplinary learning, global exposure, and practical application. Each course added depth to my skillset across <em>engineering, data analytics, sustainability, and systems thinking</em>. More than an academic stint, it was a journey of professional and personal growth.</p>"
+},
+  
+{
+  "title": "National Institute of Technology, Calicut",
+  "details": "Bachelor's Degree in Chemical Engineering, 2013 - 2017",
+  "summary": "Summary of Bachelors",
+  "content": "this"
+    }
+
+  ],
+  professional: [
+    {
+      title: " Data Scientist & Consultant ",
+      details: "Client: Rasapoorna Foods, Sarvani Sweets; Nov,2024 – Feb,2025",
+      summary: " Pricing/Combo Strategy, Creation of Real-time Dashboards",
+      content: " This is the main content of Retail project"
+    },
+    
+    {
+      title: "Project Manager, Hyperlocal Labs",
+      details: "Jul 2023 – Mar 2024",
+      summary: "Project Kaatru:Led climate-tech team;Built AQ dashboard;Delivered MVP in 9 months.",
+      content: " This is the main content of Kaatru project"
+    },
+    
+        {
+      title: "Systems Engineer, TCS",
+      details: "Jul 2023 – Mar 2024",
+      summary: "Worked as a Data Scientist for client side - Easy Jet Airlines.",
+          content: " This is the main content of EasyJet Airlines project"
+    }
+    
+  ],
+  internships: [
+    
+    {
+      title: "Workshop on Application of Satellite Remote Sensing For Air Quality & Health Research",
+      details: "By Universities Space Research Associations (USRA), Public Health Foundation of India (PHFI), Gurgaon, Feb 2020",
+      summary: "IITB Internship:CFD simulations;Python scripting;Academic exposure.",
+      content: "This is the main content of HPCL training Workshop on "
+    },
+    
+    {
+      title: "New India Internship",
+      details: "Chidambaram, Dec 2018 - Jan 2019",
+      summary: "IITB Internship:CFD simulations;Python scripting;Academic exposure.",
+      content: "This is the main content of HPCL training"
+    },
+    
+    {
+      title: "Summer Internship at IIT Madras",
+      details: "May – Jul 2016",
+      summary: "IITB Internship:CFD simulations;Python scripting;Academic exposure.",
+      content: "This is the main content of HPCL training"
+    },
+    {
+      title: "Role of Chemical Engineer in a Pharmaceutical Industry",
+      details: "Eisai Pharmaceuticals, Dec 2015",
+      summary: " Identified the mechanical operations in the unit",
+      content: "This is the main content of HPCL training"
+    },
+    
+    {
+      title: "Training at HPCL Visakha Refinery",
+      details: "June 2015",
+      summary: " Crude Distillation Unit, Oil Maintenance and Storage, Fractional Catalytic Cracking Unit, Process Control Unit Room",
+      content: "This is the main content of HPCL training"
+    }
+  ],
+  
+  Certifications: [
+    
+    {
+      title: "Statistics",
+      details: "Chidambaram, Dec 2018 - Jan 2019",
+      summary: "IITB Internship:CFD simulations;Python scripting;Academic exposure.",
+      content: "This is the main content of HPCL training"
+    }
+    ],
+ 
+  interests: [
+    {
+      title: "Photography Enthusiast",
+      details: "Ongoing",
+      summary: "Photography:Wildlife & travel;Instagram gallery;Local photo walks."
+    }
+  ]
+};
 
 
 // ========== UPDATE FOR BLOGS SECTION ==========
@@ -67,56 +258,6 @@ const blogData = {
 };
 
 
-// ========== UPDATE FOR EXPERIENCE SECTION ==========
-const experienceData = {
-  academic: [
-    {
-      title: "Indian Institute of Technology, Madras (IITM)",
-      details: "M.Tech – Chemical Engineering<br>2018 - 2020",
-      summary: "IIT Madras:M.Tech in Chemical Engineering;Focus on transport phenomena;Research in catalysis."
-    },
-    {
-      title: "University of Twente",
-      details: "Student Exchange – Feb 01 to July 2019",
-      summary: "Twente Exchange:Semester in Netherlands;Advanced process control;Cultural exchange."
-    }
-  ],
-  professional: [
-    {
-      title: "Project Manager, Hyperlocal Labs",
-      details: "Jul 2023 – Mar 2024",
-      summary: "Project Kaatru:Led climate-tech team;Built AQ dashboard;Delivered MVP in 9 months."
-    }
-  ],
-  internships: [
-    {
-      title: "Summer Internship at IIT Bombay",
-      details: "May – Jul 2016",
-      summary: "IITB Internship:CFD simulations;Python scripting;Academic exposure."
-    }
-  ],
-  books: [
-    {
-      title: "Author of 'Math Tales'",
-      details: "Published Jan 2024",
-      summary: "Math Tales:Applied math stories;Published on Kindle;Used in workshops."
-    }
-  ],
-  boo: [
-    {
-      title: "Author of 'Math Tales'",
-      details: "Published Jan 2024",
-      summary: "Math Tales:Applied math stories;Published on Kindle;Used in workshops."
-    }
-  ],
-  interests: [
-    {
-      title: "Photography Enthusiast",
-      details: "Ongoing",
-      summary: "Photography:Wildlife & travel;Instagram gallery;Local photo walks."
-    }
-  ]
-};
 
 
 // ========== UPDATE FOR SERVICE SECTION ==========
@@ -281,6 +422,8 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       `;
       setupExperienceSummary();
+        // <- ADD THIS LINE
+
     } else if (sectionId === "projects-section") {
       right.innerHTML = `
         <div id="project-toc">
@@ -344,29 +487,42 @@ document.addEventListener("DOMContentLoaded", () => {
   
 function setupExperienceEvents() {
   const tabs = document.querySelectorAll(".tab");
-  const summaryBox = document.getElementById("summary-box");
-
   tabs.forEach(tab => {
     tab.addEventListener("click", () => {
       tabs.forEach(t => t.classList.remove("active"));
       tab.classList.add("active");
 
       const type = tab.dataset.type;
+
       document.querySelectorAll(".experience-list").forEach(list => list.classList.add("hidden"));
       document.querySelector(`.${type}-list`).classList.remove("hidden");
+
+      // ✅ Update hover + click events when switching tabs
+      setupExperienceItemEvents(type);
     });
   });
 
-  const items = document.querySelectorAll(".experience-item");
+  // Initial setup for first tab (active by default)
+  const firstType = tabs[0].dataset.type;
+  setupExperienceItemEvents(firstType);
+}
+
+function setupExperienceItemEvents(type) {
+  const items = document.querySelectorAll(`.${type}-list .experience-item`);
+  const summaryBox = document.getElementById("summary-box");
 
   items.forEach(item => {
     item.addEventListener("mouseover", () => {
       const rawSummary = item.getAttribute("data-summary");
-      const [title, ...points] = rawSummary.split(";");
-      summaryBox.innerHTML = `
-        <h3>${title}</h3>
-        <ul>${points.map(p => `<li>${p}</li>`).join("")}</ul>
-      `;
+      if (rawSummary.includes("<")) {
+        summaryBox.innerHTML = rawSummary;
+      } else {
+        const [title, ...points] = rawSummary.split(";");
+        summaryBox.innerHTML = `
+          <h3>${title}</h3>
+          <ul>${points.map(p => `<li>${p}</li>`).join("")}</ul>
+        `;
+      }
     });
 
     item.addEventListener("mouseout", () => {
@@ -374,14 +530,15 @@ function setupExperienceEvents() {
     });
 
     item.addEventListener("click", () => {
-      const rawSummary = item.getAttribute("data-summary");
-      const [title, ...points] = rawSummary.split(";");
-      const content = `<h2>${title}</h2><ul>${points.map(p => `<li>${p}</li>`).join("")}</ul>`;
-      openExperienceModal(content);
+      const titleText = item.querySelector("h3").innerText;
+      const experienceList = experienceData[type];
+      const clickedItem = experienceList.find(exp => exp.title === titleText);
+
+      const contentHTML = clickedItem?.content || "<p>No additional content available.</p>";
+      openExperienceModal(contentHTML);
     });
   });
 }
-
   
 
 
@@ -406,7 +563,7 @@ function setupExperienceEvents() {
     modal.style.display = 'none';
     document.body.style.overflow = '';
   };
-
+  
   window.filterProjects = function(category) {
     const cards = document.querySelectorAll('.project-card');
     cards.forEach(card => {
@@ -414,6 +571,8 @@ function setupExperienceEvents() {
       card.style.display = (category === 'all' || match) ? 'block' : 'none';
     });
   };
+
+  
   
   function renderProjects(filter = "all") {
   const container = document.querySelector(".project-grid");
@@ -422,7 +581,7 @@ function setupExperienceEvents() {
   projects.forEach((proj, index) => {
     if (filter === "all" || proj.category === filter) {
       const card = document.createElement("div");
-      card.classList.add("project-card", proj.category);
+      card.classList.add("project-card");
       card.innerHTML = `
         <img src="${proj.img}" alt="${proj.title}" />
         <div class="title">${proj.title}</div>
@@ -436,7 +595,6 @@ function setupExperienceEvents() {
           tocPreview.innerHTML = proj.toc || "<em>Table of contents not specified</em>";
         }
       });
-
       card.addEventListener("mouseleave", () => {
         const tocPreview = document.getElementById("project-toc");
         if (tocPreview) {
@@ -447,16 +605,22 @@ function setupExperienceEvents() {
       container.appendChild(card);
     }
   });
-}  
-  renderProjects();
-  // ✅ Add filter button event listeners for projects
-document.querySelectorAll(".project-filters button").forEach(btn => {
+}
+
+
+ document.querySelectorAll(".project-filters button").forEach(btn => {
   btn.addEventListener("click", () => {
-    const filter = btn.innerText.trim();
-    renderProjects(filter === "Show All" ? "all" : filter);
+    document.querySelectorAll(".project-filters button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+
+    const filter = btn.getAttribute("data-category") || "all"; // ✅ fallback to all
+    console.log("Filtering category:", filter); // 👀 debug
+    renderProjects(filter);
   });
 });
 
+
+renderProjects();
  
   function setupBlogHoverPreview() {
   const summaryBox = document.getElementById("blog-summary");
@@ -495,9 +659,9 @@ document.querySelectorAll(".project-filters button").forEach(btn => {
   const blogModalText = document.getElementById("blogModalText");
 
 
-  function renderBlogs(filter = 'all') {
-  const blogList = document.querySelector(".blog-list");
-  blogList.innerHTML = "";
+  function renderBlogs(type = "all") {
+    const blogsToRender = type === "all" ? allBlogs : allBlogs.filter(blog => blog.type === type);
+
 
   blogData.blogs.forEach((post, index) => {
     if (filter === 'all' || post.category.toLowerCase() === filter.toLowerCase()) {
@@ -547,8 +711,8 @@ document.querySelectorAll(".blog-filters button").forEach(btn => {
 
   
   function openBlogModalFromObject(post) {
-  const blogModal = document.getElementById("blogModal");
-  const blogModalText = document.getElementById("blogModalText");
+    const blogModal = document.getElementById("blogModal");
+    const blogModalText = document.getElementById("blogModalText");
 
   blogModalText.innerHTML = `
     <h2>${post.title}</h2>
@@ -568,10 +732,17 @@ document.querySelectorAll(".blog-filters button").forEach(btn => {
     document.body.style.overflow = "hidden";
   }
 
+
   function closeBlogModal() {
-    blogModal.style.display = "none";
-    document.body.style.overflow = "auto";
+    const modal = document.getElementById("blogModal");
+    modal.style.display = "none";
   }
+  window.addEventListener("click", (e) => {
+  const modal = document.getElementById("blogModal");
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
 
   document.querySelectorAll(".blog-filters button").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -586,10 +757,10 @@ renderBlogs();
 
 
   function initCarousels() {
-  const containers = document.querySelectorAll(".service-block");
-  const rightPane = document.querySelector(".right .service-description");
+    const containers = document.querySelectorAll(".service-block");
+    const rightPane = document.querySelector(".right .service-description");
 
-  containers.forEach((container, serviceIndex) => {
+    containers.forEach((container, serviceIndex) => {
     let currentIndex = 0;
     const imageEl = container.querySelector(".service-image");
 
@@ -637,21 +808,21 @@ renderBlogs();
 
   
   function openServiceModal(serviceTitle, subTitle, details) {
-  const modal = document.createElement("div");
-  modal.classList.add("modal");
-  modal.style.display = "flex";
+    const modal = document.createElement("div");
+    modal.classList.add("modal");
+    modal.style.display = "flex";
 
-  modal.innerHTML = `
-    <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
-      <button class="close-btn" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto';">&times;</button>
-      <div class="modal-body">
-        <div class="modal-text">
-          <h2>${serviceTitle} - ${subTitle}</h2>
-          <p>${details}</p>
+    modal.innerHTML = `
+      <div class="modal-content" style="max-height: 80vh; overflow-y: auto;">
+        <button class="close-btn" onclick="this.closest('.modal').remove(); document.body.style.overflow='auto';">&times;</button>
+        <div class="modal-body">
+          <div class="modal-text">
+            <h2>${serviceTitle} - ${subTitle}</h2>
+            <p>${details}</p>
+          </div>
         </div>
       </div>
-    </div>
-  `;
+    `;
 
   document.body.appendChild(modal);
   document.body.style.overflow = "hidden";
@@ -720,4 +891,7 @@ function openExperienceModal(contentHTML) {
 }
 
 
+document.getElementById('menu-toggle').addEventListener('click', function () {
+  document.querySelector('aside').classList.toggle('active');
+});
 
